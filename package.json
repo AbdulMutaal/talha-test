@@ -1,0 +1,47 @@
+{
+    "name": "quick-mern-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+        "start:prod": "node server.js",
+        "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+        "client": "cd client && npm run start",
+        "install": "cd client && npm install",
+        "build": "cd client && npm run build",
+        "heroku-postbuild": "npm run build",
+        "client-install": "npm install --prefix client",
+        "server": "nodemon server.js",
+        "dev": "concurrently \"npm run server\" \"npm run client\""
+    },
+    "engines": {
+        "node": "14.1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.1",
+        "if-env": "^1.0.4",
+        "is-empty": "^1.2.0",
+        "jsonwebtoken": "^8.5.1",
+        "jwt-decode": "^3.1.2",
+        "mongoose": "^5.9.15",
+        "nodemailer": "^6.7.2",
+        "passport": "^0.4.1",
+        "passport-jwt": "^4.0.0",
+        "passport-local": "^1.0.0",
+        "sass": "^1.49.9",
+        "uuid": "^8.3.2",
+        "validator": "^13.0.0"
+    },
+    "devDependencies": {
+        "concurrently": "^5.2.0",
+        "nodemon": "^2.0.4"
+    }
+}

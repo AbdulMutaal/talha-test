@@ -1,0 +1,33 @@
+
+.register-form {
+    max-width: 480px;
+    margin: auto;
+    padding: 50px 25px 50px 25px;
+}
+
+.form-error {
+    color: red;
+    font-style: italic;
+}
+.forgot-password{
+    color:#007bff !important;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+.forgot-password:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.ml-10{
+    margin-left: 10px;
+}
+.pointer:hover{
+    cursor: pointer;
+}
+.loading-spinner{
+    height: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px !important;
+}
